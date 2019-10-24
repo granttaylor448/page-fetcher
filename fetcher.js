@@ -5,50 +5,10 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
-
 const request = require('request');
 
-// request(args[0], (error, response, body) => {
-  // 
-  // fs.writeFile( args[1], body, (err) => {
-    // if (err) throw err;
-    // else {
-      // if (fs.existsSync(args[1])) {
-      // rl.question('Do you want to overwrite this file?', (answer) => {
-        // if (answer === "yes") {
-          // console.log("You got it")
-          // rl.close()
-        // } else {
-          // rl.close()
-        // }
-      // 
-      // });
-    // }
-    //  };
-    // console.log('The file has been saved');
-  // });
-// });
-
-// const data = new Uint8Array(Buffer.from(request()));
-
-// const writer = fs.writeFile( args[1], package, (err) => {
-  // if (err) throw err;
-  // console.log('The final has been saved');
-// });
-// 
-// setTimeout(() => {
-  // writer
-// }, 1000);
 
 request(args[0], (error, response, body) => {
-  let string = args[1]
-//  if (string.slice((string.length - 4[ string.length] !== "html"))) {
-  // console.log(string.slice((string.length - 4[ string.length] !== "html")))
-  // rl.close()
-  // return;
-//  }
-  
   if (body === undefined){
     console.log("Whoops that's not a website")
     rl.close()
@@ -82,3 +42,35 @@ request(args[0], (error, response, body) => {
         })
       }
     });
+
+    // request(args[0], (error, response, body) => {
+  // 
+  // fs.writeFile( args[1], body, (err) => {
+    // if (err) throw err;
+    // else {
+      // if (fs.existsSync(args[1])) {
+      // rl.question('Do you want to overwrite this file?', (answer) => {
+        // if (answer === "yes") {
+          // console.log("You got it")
+          // rl.close()
+        // } else {
+          // rl.close()
+        // }
+      // 
+      // });
+    // }
+    //  };
+    // console.log('The file has been saved');
+  // });
+// });
+
+// const data = new Uint8Array(Buffer.from(request()));
+
+// const writer = fs.writeFile( args[1], package, (err) => {
+  // if (err) throw err;
+  // console.log('The final has been saved');
+// });
+// 
+// setTimeout(() => {
+  // writer
+// }, 1000);
